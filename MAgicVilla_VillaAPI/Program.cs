@@ -17,7 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<ApplicationDbContext>(option =>
 {
-	option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"))
+	option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
 });
 builder.Services.AddControllers(option=>
 {
